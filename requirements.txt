@@ -1,4 +1,5 @@
 attrs==19.3.0
+-e git+git@github.com:L-Ghost/b3-base.git@badccf8ee95bd7d45f032b6ec770beb991355a74#egg=b3
 importlib-metadata==1.7.0
 iniconfig==1.0.1
 more-itertools==8.4.0
