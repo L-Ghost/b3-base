@@ -19,7 +19,8 @@ def test_read_file_and_return_stocks_list():
             '23,05', '23,69', '23,4', '23,33', '', '', '21458', '11202000'
         ]
     assert second_stock == [
-            '2020-07-24', 'PETR3F', 'BRPETRACNOR9', 'ODD LOT',
-            '23,06', '23,67', '23,38', '23,45', '', '', '945', '17609'
+            '2020-07-24', 'PETR4', 'BRPETRACNPR6', 'CASH',
+            '22,42', '23,06', '22,75', '22,73', '', '', '45405', '43380300'
         ]
-    assert len(stocks_list) == 4
+    assert len(stocks_list) == 2
+

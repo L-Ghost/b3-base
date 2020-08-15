@@ -13,6 +13,6 @@ class TradeInformation:
 
     def filter_stocks(self, stocks_data):
         return list(filter(
-            lambda row: row[3] in ['CASH', 'ODD LOT'], stocks_data
+            lambda row: row[3] == 'CASH', stocks_data
         ))
 
