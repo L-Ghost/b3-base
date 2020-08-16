@@ -3,6 +3,9 @@ class StocksList:
     def __init__(self, stocks):
         self.stocks = stocks
 
+    def tickers(self):
+        return [stock_info[1] for stock_info in self.stocks]
+
     def to_dict(self):
         return {
             stock_info[1]: {

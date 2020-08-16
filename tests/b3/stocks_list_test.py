@@ -2,7 +2,9 @@ import pytest
 from b3.stocks_list import StocksList
 
 
-def test_parse_list_into_dict():
+@pytest.fixture
+def stocks_list():
+    '''Retrieves a list with stocks data'''
     first_stock = [
             '2020-07-24', 'PETR3', 'BRPETRACNOR9', 'CASH',
             '23,05', '23,69', '23,4', '23,33', '', '', '21458', '11202000'
@@ -13,8 +15,9 @@ def test_parse_list_into_dict():
         ]
     trade_information_stocks = [first_stock, second_stock]
 
-    stocks_list = StocksList(trade_information_stocks)
+    return StocksList(trade_information_stocks)
 
+def test_parse_list_into_dict(stocks_list):
     assert stocks_list.to_dict() == {
             'PETR3': {
                 'minimum_price': '23,05',
@@ -30,4 +33,6 @@ def test_parse_list_into_dict():
             }
         }
 
+def test_retrieve_tickers_from_list(stocks_list):
+    assert stocks_list.tickers() == ['PETR3', 'PETR4']
 
