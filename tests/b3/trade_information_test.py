@@ -1,6 +1,6 @@
 import pytest
 import os
-from b3.trade_information import TradeInformation
+from b3 import TradeInformation
 
 TEST_FILE = 'trade_information_test/TradeInformationConsolidatedFile_sample.csv'
 

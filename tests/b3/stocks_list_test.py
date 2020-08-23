@@ -1,5 +1,5 @@
 import pytest
-from b3.stocks_list import StocksList
+from b3 import StocksList
 
 
 @pytest.fixture
